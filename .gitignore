@@ -7,4 +7,3 @@ dev/
 *.log
 .DS_Store
 src/__tests__/
-src/dev/PseudoCode.js
