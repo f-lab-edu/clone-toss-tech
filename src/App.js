@@ -23,3 +23,7 @@ app.innerHTML = `
   </section>
 </section>
 `;
+
+const Request = Requests();
+// console.log(Request.getArticlesList())
+// console.log(Request.getArticle(1))
