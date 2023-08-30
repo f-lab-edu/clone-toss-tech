@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/f-lab-edu/clone-toss-tech#readme",
   "devDependencies": {
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "vite": "^4.4.9"
   },
   "dependencies": {
-    "vite": "^4.4.9"
   }
 }
