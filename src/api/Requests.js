@@ -1,42 +1,36 @@
 import axios from "axios";
 
-async function articlesData() {
-  let articlesList;
+const attributeFilePath = {
+  main: "../../data/articlesList.json",
+  article: "../../data/article.json",
+};
 
-  const loadData = async function () {
-    try {
-      await axios.get("../../data/articlesList.json").then((res) => {
-        articlesList = res.data;
-      });
-    } catch (e) {
-      alert("Error at Requests.js : " + e);
-    }
-  };
-
-  await loadData();
-
-  const checkDataExist = async function () {
-    if (articlesList === undefined) {
-      await loadData();
-      return false;
-    }
-    return true;
-  };
-
-  const getArticlesList = function () {
-    if (!checkDataExist()) {
-      return;
-    }
-    return articlesList;
-  };
-
-  return { getArticlesList };
+async function fetchFile(path) {
+  try {
+    return await axios.get(path).then((res) => {
+      return res.data;
+    });
+  } catch (e) {
+    alert("Error at Requests.js : " + e);
+  }
 }
 
-const data = await articlesData();
+async function getData(attribute) {
+  const filePath = attributeFilePath[attribute];
+  return await fetchFile(filePath);
+}
+
+function getArticlesList() {
+  return getData("main");
+}
+
+function getArticle() {
+  return getData("article");
+}
 
 export default function Requests() {
   return {
-    getArticlesList: data.getArticlesList,
+    getArticlesList,
+    getArticle,
   };
 }
