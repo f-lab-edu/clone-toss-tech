@@ -40,7 +40,9 @@
     "rules": {
       "prettier/prettier": [
         "error"
-      ]
+      ],
+      "import/no-unresolved": "off",
+      "no-console": "off"
     }
   }
 }
