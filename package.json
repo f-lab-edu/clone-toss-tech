@@ -21,10 +21,26 @@
   },
   "homepage": "https://github.com/f-lab-edu/clone-toss-tech#readme",
   "devDependencies": {
+    "eslint": "^8.48.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3",
     "vite": "^4.4.9"
   },
   "dependencies": {
     "axios": "^1.5.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ]
+    }
   }
 }
