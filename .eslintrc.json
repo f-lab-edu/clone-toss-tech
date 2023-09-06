@@ -1,0 +1,18 @@
+{
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ],
+      "import/no-unresolved": "off",
+      "no-console": "off"
+    },
+    "env": {
+      "browser": true
+    }
+  }
+}

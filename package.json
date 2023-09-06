@@ -30,22 +30,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "axios": "^1.5.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "airbnb",
-      "plugin:prettier/recommended"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error"
-      ],
-      "import/no-unresolved": "off",
-      "no-console": "off"
-    },
-    "env": {
-      "browser": true
-    }
+    "axios": "^1.5.0",
+    "msw": "^1.2.5"
   }
 }
