@@ -10,7 +10,9 @@
     "no-console": [
       "error",
       {
-        "allow": "error"
+        "allow": [
+          "error"
+        ]
       }
     ],
     "import/no-unresolved": [
