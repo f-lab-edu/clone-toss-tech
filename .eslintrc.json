@@ -7,7 +7,12 @@
     "prettier/prettier": [
       "error"
     ],
-    "no-console": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": "error"
+      }
+    ],
     "import/no-unresolved": [
       "error",
       {
