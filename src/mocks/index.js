@@ -1,19 +1,23 @@
 import { setupWorker } from 'msw';
 import axios from 'axios';
-import { setRequestHandler } from './config';
-import getArticleList from './get-article-list';
-import getArticle from './get-article';
+import getArticleListHandler from './get-article-list';
+import getArticleBodyHandler from './get-article-body';
 
-const articleList = await getArticleList();
-const articleListHandler = setRequestHandler('/api/get/article-list', articleList);
-const articles = await getArticle();
-const articleHandler = setRequestHandler('/api/get/article/:id', articles, true);
+const articleListHandler = await getArticleListHandler();
+const articleBodyHandler = await getArticleBodyHandler();
 
-const handlers = [articleListHandler, articleHandler];
+const handlers = [articleListHandler, articleBodyHandler];
 
 const worker = setupWorker(...handlers);
 
-const initMocks = () => worker.start();
+const initMocks = () => {
+  try {
+    return worker.start();
+  } catch (e) {
+    // TODO: Same as below. Ticket WOO-64
+    console.error('Failed to start worker. Error is : ' + e);
+  }
+};
 
 export async function fetchFile(path) {
   try {
