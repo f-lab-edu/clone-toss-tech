@@ -5,5 +5,4 @@ dev/
 .idea/
 *.log
 .DS_Store
-src/__tests__/
 .github
