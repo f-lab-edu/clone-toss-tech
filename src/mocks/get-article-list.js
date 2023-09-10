@@ -1,10 +1,9 @@
 import { rest } from 'msw';
-import { fetchFile } from './index';
-import { setRequestHandler } from './config';
+import { createMockServerEndpoint } from './config';
+import { fetchFile } from '../utils';
 
-const getArticleListHandler = async () => {
-  const fixture = await fetchFile('/__fixtures__/article-list.json');
-  return setRequestHandler(rest.get, '/api/get/article-list', fixture, (req, data) => data);
+const getArticleListHandler = () => {
+  return createMockServerEndpoint(rest.get, '/api/article-list', fetchFile('article-list'), (req, data) => data);
 };
 
 export default getArticleListHandler;
