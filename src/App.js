@@ -4,15 +4,13 @@ app.innerHTML = html`
   <section>
     <header class="main-header">
       <div class="header-container">
-        <div id="logo-image">
-          <img src="/images/logo-image.png" class="logo-image" alt="로고 이미지" />
+        <div class="logo-image">
+          <img alt="로고 이미지" src="/images/logo-image.png" />
         </div>
       </div>
     </header>
   </section>
   <section>
-    <div>
-      <div id="content" class="content"></div>
-    </div>
+    <div class="content" id="content"></div>
   </section>
 `;

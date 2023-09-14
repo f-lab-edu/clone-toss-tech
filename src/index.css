@@ -42,31 +42,3 @@ table {
 td, th {
     padding: 0
 }
-
-.main-header {
-    height: 60px;
-    background-color: white;
-    border-bottom: 1px solid black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.header-container {
-    width: 100%;
-    max-width: 1140px;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-.logo-image {
-    max-height: 50px
-}
-
-.content {
-    min-height: calc(100vh - 60px);
-    margin: 61px auto 50px;
-}
