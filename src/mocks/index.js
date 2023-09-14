@@ -8,7 +8,7 @@ const initMocks = () => {
     const worker = setupWorker(...mockHandlers);
     return worker.start();
   } catch (e) {
-    if (import.meta.env.VITE_APP_ENV === 'development') {
+    if (import.meta.env.MODE === 'development') {
       console.error(`Failed to start worker. Error is : ${e}`);
     }
     return null;

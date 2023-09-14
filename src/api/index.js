@@ -8,7 +8,7 @@ export const fetchData = path => {
   try {
     return instance.get(path);
   } catch (e) {
-    if (import.meta.env.VITE_APP_ENV === 'development') {
+    if (import.meta.env.MODE === 'development') {
       console.error(`Error at api/index.js : ${e}`);
     }
     return null;

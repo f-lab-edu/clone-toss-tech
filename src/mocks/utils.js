@@ -15,7 +15,7 @@ export function fetchMocks(path) {
       }
     }
   } catch (e) {
-    if (import.meta.env.VITE_APP_ENV === 'development') {
+    if (import.meta.env.MODE === 'development') {
       console.error(`Error at mocks/utils.js : ${e}`);
     }
     return null;
