@@ -8,7 +8,7 @@ export const fetchData = path => {
   try {
     return instance.get(path);
   } catch (e) {
-    if (import.meta.env.MODE === 'development') {
+    if (import.meta.env.DEV) {
       console.error(`Error at api/index.js : ${e}`);
     }
     return null;
