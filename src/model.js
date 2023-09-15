@@ -6,7 +6,13 @@ export default class Model {
   }
 
   setArticleList() {
-    this.articleList = fetchData('/articles').then(res => res.data);
+    try {
+      this.articleList = fetchData('/articles').then(res => res.data);
+    } catch (e) {
+      if (import.meta.env.DEV) {
+        console.error(`Error at model method setArticleList : ${e}`);
+      }
+    }
   }
 
   getArticleList() {
@@ -14,6 +20,12 @@ export default class Model {
   }
 
   getArticleBody(id) {
-    return fetchData(`/article/${id}`).then(res => res.data);
+    try {
+      return fetchData(`/article/${id}`).then(res => res.data);
+    } catch (e) {
+      if (import.meta.env.DEV) {
+        console.error(`Error at model method getArticleBody : ${e}`);
+      }
+    }
   }
 }
