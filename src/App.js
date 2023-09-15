@@ -1,4 +1,5 @@
-const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
+import { html } from './utils';
+
 const app = document.getElementById('root');
 app.innerHTML = html`
   <section>
