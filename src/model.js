@@ -21,11 +21,17 @@ export default class Model {
 
   getArticleBody(id) {
     try {
-      return fetchData(`/article/${id}`).then(res => res.data);
+      const articleInfo = this.articleList;
+      const bodyData = fetchData(`/article/${id}`);
+      return Promise.all([articleInfo, bodyData]).then(([articleInfo, bodyData]) => ({
+        ...articleInfo[id],
+        body: bodyData.data,
+      }));
     } catch (e) {
       if (import.meta.env.DEV) {
         console.error(`Error at model method getArticleBody : ${e}`);
       }
+      return null;
     }
   }
 }
