@@ -1,6 +1,6 @@
-import { fetchData } from './api/index';
+import { fetchData } from './api/index.js';
 
-export default class Model {
+export default class DataHandler {
   constructor() {
     this.setArticleList();
   }

@@ -1,5 +1,4 @@
 import { html } from './utils';
-import Model from './model';
 import { initMocks } from './mocks/index';
 
 const app = document.getElementById('root');
@@ -19,4 +18,3 @@ app.innerHTML = html`
 `;
 
 initMocks();
-const model = new Model();
