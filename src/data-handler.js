@@ -15,11 +15,10 @@ export default class DataHandler {
     }
   }
 
-  getArticleList() {
-    return this.articleList;
-  }
-
-  getArticleBody(id) {
+  getArticleData(id) {
+    if (!id) {
+      return this.articleList;
+    }
     try {
       const articleInfo = this.articleList;
       const bodyData = fetchData(`/article/${id}`);
