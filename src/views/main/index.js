@@ -27,11 +27,8 @@ const makeArticleElement = props => {
 export default function render(articleList) {
   setupTemplate();
   const newArticlesUlElement = document.createElement('ul');
-  const articleListArray = Object.entries(articleList).map(([id, value]) => ({ id, ...value }));
-  const $articles = document.getElementById('articles');
-
-  Object.keys(articleList).forEach(() => {
-    newArticlesUlElement.append(makeArticleElement(articleListArray.pop()));
+  Object.entries(articleList).forEach(([id, value]) => {
+    newArticlesUlElement.prepend(makeArticleElement({ id, ...value }));
   });
-  $articles.appendChild(newArticlesUlElement);
+  document.getElementById('articles').appendChild(newArticlesUlElement);
 }
