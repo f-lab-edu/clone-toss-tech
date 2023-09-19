@@ -137,18 +137,6 @@
       "title": "레고처럼 조립하는 토스 앱",
       "summary": "수많은 서비스를 담고 있는 대규모 iOS 앱에 어울리는 아키텍처는 무엇일까요?\n프로젝트 간의 의존성과 모듈 간의 결합도를 낮춰, 더 효율적인 서비스 개발, 관리를 이뤄낸 과정을 소개합니다. ",
       "created_date": "20230822"
-    },
-    "24": {
-      "thumbnail_image": "https://static.toss.im/career-resource/techblog_slash23_thumb_02.png",
-      "title": "은행 최초 코어뱅킹 MSA 전환기 (feat. 지금 이자 받기)",
-      "summary": "수십 년간 정체되어 있던 전통적인 은행 시스템의 모놀리식 소프트웨어 아키텍처를 MSA로 전환할 수 있을까요? \n토스뱅크의 ‘코어뱅킹 MSA 전환’ 사례를 통해 향후 은행 시스템이 나아가야 할 방향을 소개합니다.",
-      "created_date": "20230831"
-    },
-    "25": {
-      "thumbnail_image": "https://static.toss.im/illusts-content/img-how-to-read.jpg",
-      "title": "환경 고민없이 개발하기",
-      "summary": "서버 사이드 렌더링 작동 방식과 Isomorphic에 대해 소개드려요.",
-      "created_date": "20230901"
     }
   }
 }
