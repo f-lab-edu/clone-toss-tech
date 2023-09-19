@@ -1,9 +1,6 @@
+import { format } from 'date-fns';
+
 export const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
 
-export function formatDate(inputDate) {
-  const year = inputDate.substring(0, 4);
-  const month = inputDate.substring(4, 6);
-  const day = inputDate.substring(6, 8);
-
-  return `${year}. ${parseInt(month, 10)}. ${parseInt(day, 10)}`;
-}
+export const formatDate = inputDate =>
+  format(new Date(`${inputDate.substring(0, 4)}.${inputDate.substring(4, 6)}.${inputDate.substring(6, 8)}`), 'yyyy.MM.dd');
