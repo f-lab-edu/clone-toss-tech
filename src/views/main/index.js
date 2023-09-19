@@ -1,5 +1,4 @@
-import { format } from 'date-fns';
-import { html } from '../../utils';
+import { formatDate, html } from '../../utils';
 
 const setupTemplate = () => {
   const $content = document.getElementById('content');
@@ -19,7 +18,7 @@ const makeArticleElement = props => {
     <div>
       <span>${title}</span>
       <span>${summary}</span>
-      <span>${format(createdDate, 'yyyy.MM.dd')}</span>
+      <span>${formatDate(createdDate)}</span>
     </div>
   `;
   return article;
