@@ -1,6 +1,6 @@
 import { fetchData } from '../api/index.js';
 
-const makeRequestToAPI = path => {
+const makeRequest = path => {
   try {
     return fetchData(path).then(res => res.data);
   } catch (e) {
@@ -12,7 +12,7 @@ const makeRequestToAPI = path => {
 };
 
 const setArticleList = async () => {
-  const result = await makeRequestToAPI('/articles');
+  const result = await makeRequest('/articles');
   if (!result) {
     return null;
   }
@@ -22,13 +22,10 @@ const setArticleList = async () => {
 function Article() {
   this.articleList = setArticleList();
   this.getArticleList = async () => await this.articleList;
-
   this.getArticleBody = async id => {
-    const body = await makeRequestToAPI(`/article/${id}`);
-    return {
-      ...this.articleList[id],
-      body: body.data,
-    };
+    const { data } = await makeRequest(`/article/${id}`);
+    if (data && this.articleList[id]) return { ...this.articleList[id], body: data };
+    return null;
   };
 }
 

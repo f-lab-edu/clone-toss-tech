@@ -8,7 +8,7 @@ const start = () => {
     <section>
       <header class="main-header">
         <div class="header-container">
-          <div class="logo-image" id="logo-image">
+          <div class="logo-image">
             <img alt="로고 이미지" src="/images/logo-image.png" />
           </div>
         </div>
