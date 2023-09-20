@@ -10,8 +10,8 @@ const setupTemplate = () => {
 };
 
 const makeArticleElement = props => {
-  const { thumbnail_image: thumbnailImage, title, summary, created_date: createdDate, id } = props;
-  const article = document.createElement('div');
+  const { created_date: createdDate, id, summary, title, thumbnail_image: thumbnailImage } = props;
+  const article = document.createElement('li');
   article.id = id;
   article.innerHTML = html`
     <img alt="썸네일 이미지" src="${thumbnailImage}" />
@@ -25,10 +25,19 @@ const makeArticleElement = props => {
 };
 
 export default function render(articleList) {
-  setupTemplate();
-  const newArticlesUlElement = document.createElement('ul');
-  Object.entries(articleList).forEach(([id, value]) => {
-    newArticlesUlElement.prepend(makeArticleElement({ id, ...value }));
-  });
-  document.getElementById('articles').appendChild(newArticlesUlElement);
+  try {
+    if (!articleList) {
+      throw new Error('articleList is not defined.');
+    }
+    setupTemplate();
+    const ul = document.createElement('ul');
+    Object.entries(articleList).forEach(([id, content]) => {
+      ul.prepend(makeArticleElement({ id, ...content }));
+    });
+    document.getElementById('articles').appendChild(ul);
+  } catch (e) {
+    if (import.meta.env.MODE === 'development') {
+      console.error(`Error at main/index.js : ${e}`);
+    }
+  }
 }
