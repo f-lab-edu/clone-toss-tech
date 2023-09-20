@@ -13,9 +13,7 @@ const makeRequest = path => {
 
 const setArticleList = async () => {
   const result = await makeRequest('/articles');
-  if (!result) {
-    return null;
-  }
+  if (!result) return null;
   return result.articles;
 };
 
