@@ -6,12 +6,13 @@ const initMocks = () => {
   try {
     const mockHandlers = [getArticleListHandler, getArticleBodyHandler].map(handler => handler());
     const worker = setupWorker(...mockHandlers);
-    return worker.start();
+    worker.start();
+    return true;
   } catch (e) {
     if (import.meta.env.DEV) {
       console.error(`Failed to start worker. Error is : ${e}`);
     }
-    return null;
+    return false;
   }
 };
 

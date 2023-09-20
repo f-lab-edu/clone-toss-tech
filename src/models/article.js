@@ -13,17 +13,10 @@ const makeRequestToAPI = path => {
 
 const setArticleList = async () => {
   const result = await makeRequestToAPI('/articles');
-  try {
-    if (!!result && !!result.articles) {
-      return result.articles;
-    }
-    throw new Error('articleList is not defined.');
-  } catch (e) {
-    if (import.meta.env.DEV) {
-      console.error(`Error at article.js setArticleList() : ${e}`);
-    }
+  if (!result) {
     return null;
   }
+  return result.articles;
 };
 
 function Article() {
