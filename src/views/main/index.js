@@ -13,6 +13,7 @@ const makeArticleElement = props => {
   const { created_date: createdDate, id, summary, title, thumbnail_image: thumbnailImage } = props;
   const article = document.createElement('li');
   article.id = id;
+  article.class = 'temp-class';
   article.innerHTML = html`
     <img alt="썸네일 이미지" src="${thumbnailImage}" />
     <div>
