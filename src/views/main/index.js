@@ -1,5 +1,4 @@
 import { formatDate, html } from '../../utils';
-import styles from './index.module.css';
 import { ErrorComponent } from '../error/index';
 
 const setupTemplate = () => {
