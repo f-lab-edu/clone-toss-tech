@@ -28,8 +28,9 @@ const makeArticleElement = props => {
 export default function render(articleList) {
   setupTemplate();
   const $articleContainer = document.getElementById('articles');
-  const ul = document.createElement('ul');
   if (!articleList) return $articleContainer.appendChild(ErrorComponent('articleList load failure'));
+
+  const ul = document.createElement('ul');
   Object.entries(articleList).forEach(([id, content]) => {
     ul.prepend(makeArticleElement({ id, ...content }));
   });
