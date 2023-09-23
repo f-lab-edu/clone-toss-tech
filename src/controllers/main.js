@@ -2,10 +2,10 @@ import renderMainPage from '../views/main/index';
 import { makeErrorLogOnConsole } from '../utils';
 
 const setClickEventListenerOnArticle = router => {
-  const $articleDivs = document.getElementsByClassName('main-article');
-  $articleDivs.forEach(div => {
-    div.addEventListener('click', () => {
-      window.history.pushState('', '', `/article/${div.id}`);
+  const $articleHeadContainers = document.getElementsByClassName('main-article');
+  $articleHeadContainers.forEach($li => {
+    $li.addEventListener('click', () => {
+      window.history.pushState('', '', `/article/${$li.id}`);
       router.navigate(window.location.pathname);
       window.scrollTo(0, 0);
     });
