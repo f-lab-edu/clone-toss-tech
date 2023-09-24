@@ -6,7 +6,9 @@ export default function render(props) {
   $content.innerHTML = html`
     <article>
       <header>
-        <img alt="제목 이미지" src="${thumbnailImage}" />
+        <div>
+          <img alt="제목 이미지" src="${thumbnailImage}" />
+        </div>
         <h1>${title}</h1>
         <span>${formatDate(createdDate)}</span>
       </header>
