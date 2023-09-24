@@ -1,5 +1,4 @@
 import renderMainPage from '../views/main/index';
-import { makeErrorLogOnConsole } from '../utils';
 
 const setClickEventListenerOnArticle = router => {
   const $articleHeadContainers = document.getElementsByClassName('main-article');
@@ -13,15 +12,16 @@ const setClickEventListenerOnArticle = router => {
 };
 
 function Main(router, model) {
-  try {
-    this.render = async () => {
-      renderMainPage(await model.getArticleList());
+  this.render = async () => {
+    try {
+      const contents = await model.getArticleList();
+      renderMainPage(contents);
       setClickEventListenerOnArticle(router);
-    };
-    router.addRoute('/', this.render.bind(this));
-  } catch (e) {
-    makeErrorLogOnConsole(e);
-  }
+    } catch (e) {
+      if (import.meta.env.DEV) console.error(`Error at controllers/main.js render : ${e}`);
+    }
+  };
+  router.addRoute('/', this.render.bind(this));
 }
 
 export default Main;
