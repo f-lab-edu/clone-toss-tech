@@ -1,7 +1,8 @@
 # Toss Tech Blog built with vanilla JS
 
 ## 프로젝트 소개
-[토스 테크 블로그](https://toss.tech/)를 클론 코딩한 프로젝트입니다.
+[토스 테크 블로그](https://toss.tech/)를 클론 코딩한 프로젝트입니다.  
+해당 프로젝트의 [테크 스펙](https://docs.google.com/document/d/1Mo0bxmFlvRBjjDsTF8LsH1OGRASzghsj9XOpNwGINEo/edit?usp=sharing)입니다.
 
 ## 프로젝트 목표
 Vanilla JS와 History API를 사용하여 SPA를 구현합니다.  
