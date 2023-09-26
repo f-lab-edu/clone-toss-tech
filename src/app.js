@@ -1,5 +1,6 @@
 import { html } from './utils';
 import { initMocks } from './mocks/index';
+import ControllerInitializer from './controllers/index';
 
 const hasMocks = initMocks();
 const start = () => {
@@ -18,6 +19,7 @@ const start = () => {
       <div id="content"></div>
     </section>
   `;
+  const controller = new ControllerInitializer();
 };
 
 if (hasMocks) {

@@ -1,7 +1,7 @@
 import renderMainPage from '../views/main/index';
 
 const setClickEventListenerOnArticle = router => {
-  const $articleHeadContainers = document.querySelectorAll('li[class*="main-article"]');
+  const $articleHeadContainers = document.querySelectorAll('li');
   $articleHeadContainers.forEach($li => {
     $li.addEventListener('click', () => {
       window.history.pushState('', '', `/article/${$li.id}`);
