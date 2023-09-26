@@ -1,7 +1,20 @@
 import { html } from './utils';
 import { initMocks } from './mocks/index';
-import ControllerInitializer from './controllers/index';
+import Router from './router';
+import Model from './models/article';
+import Controller from './controllers/index';
 
+const onClickLogo = router => {
+  const logoImage = document.getElementsByClassName('logo-image');
+  if (logoImage) {
+    logoImage[0].addEventListener('click', () => {
+      if (window.location.pathname !== '/') {
+        window.history.pushState('', '', '/');
+        router.navigate(window.location.pathname);
+      }
+    });
+  }
+};
 const hasMocks = initMocks();
 const start = () => {
   const app = document.getElementById('root');
@@ -19,7 +32,11 @@ const start = () => {
       <div id="content"></div>
     </section>
   `;
-  const controller = new ControllerInitializer();
+  const router = new Router();
+  const model = new Model();
+  const hasController = Controller(router, model);
+  onClickLogo(router);
+  if (hasController) router.start();
 };
 
 if (hasMocks) {

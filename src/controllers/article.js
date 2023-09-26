@@ -1,11 +1,11 @@
-import articleViewModule from '../views/article/index';
+import renderArticlePage from '../views/article/index';
 
 function Article(router, model) {
   this.render = async () => {
     try {
       const targetID = window.location.pathname.replace('/article/', '').match(/\d+/).toString();
       const data = await model.getArticleBody(targetID);
-      articleViewModule(data);
+      renderArticlePage(data);
     } catch (e) {
       if (import.meta.env.DEV) console.error(`Error at controllers/article.js render() : ${e}`);
     }
