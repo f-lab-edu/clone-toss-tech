@@ -5,7 +5,7 @@ import Model from './models/article';
 import Controller from './controllers/index';
 
 const onClickLogo = router => {
-  const logoImage = document.getElementsByClassName('logo-image');
+  const logoImage = document.getElementsByClassName('logo-image-container');
   if (logoImage) {
     logoImage[0].addEventListener('click', () => {
       if (window.location.pathname !== '/') {
@@ -22,7 +22,7 @@ const start = () => {
     <section>
       <header class="main-header">
         <div class="header-container">
-          <div class="logo-image">
+          <div class="logo-image-container">
             <img alt="로고 이미지" src="/images/logo-image.png" />
           </div>
         </div>
