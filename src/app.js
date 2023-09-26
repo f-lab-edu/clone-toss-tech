@@ -15,7 +15,7 @@ const start = () => {
       </header>
     </section>
     <section>
-      <div class="content" id="content"></div>
+      <div id="content"></div>
     </section>
   `;
 };
