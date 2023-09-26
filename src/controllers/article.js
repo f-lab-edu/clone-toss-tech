@@ -1,12 +1,10 @@
 import renderArticlePage from '../views/article/index';
 
 function Article(router, model) {
-  this.render = async () => {
+  this.render = async targetID => {
     try {
-      const match = window.location.pathname.match(/\/article\/(\d+)/);
-      const targetID = match ? match[1] : null;
       if (targetID) {
-        const data = await model.getArticleBody(targetID);
+        const data = await model.getArticleBody(targetID[1]);
         renderArticlePage(data);
       }
       return null;
