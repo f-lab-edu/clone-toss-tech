@@ -1,11 +1,11 @@
-import { fetchData } from '../api/index.js';
+import { fetchData } from '../api/index';
 
 const makeRequest = path => {
   try {
     return fetchData(path).then(res => res.data);
   } catch (e) {
-    // TODO: DEV 환경일 때 에러 정보 로그를 출력하는 Util function 추가 예정 Ticket: WOO-75
     if (import.meta.env.DEV) console.error(`Error at article.js makeRequestToAPI(${path} : ${e}`);
+
     return null;
   }
 };
@@ -13,22 +13,25 @@ const makeRequest = path => {
 const setArticleList = async () => {
   const result = await makeRequest('/articles');
   if (!result) return null;
+
   return result.articles;
 };
 
 function Article() {
   this.articleList = setArticleList();
   this.getArticleList = async () => await this.articleList;
-  this.getArticleBody = async id => {
-    try {
-      const { data } = await makeRequest(`/article/${id}`);
-      if (data && this.articleList[id]) return { ...this.articleList[id], body: data };
-    } catch (e) {
-      // TODO: 상동 Ticket: WOO-75
-      if (import.meta.env.DEV) console.error(`Error at article.js getArticleBody(${id}) : ${e}`);
-      return null;
-    }
-  };
+  this.getArticleBody = id =>
+    Promise.all([this.getArticleList(), makeRequest(`/article/${id}`)])
+      .then(([head, body]) => {
+        if (head && body) return { ...head[id], body };
+
+        return null;
+      })
+      .catch(e => {
+        if (import.meta.env.DEV) console.error(`Error at article.js getArticleBody(${id}) : ${e}`);
+
+        return null;
+      });
 }
 
 export default Article;
