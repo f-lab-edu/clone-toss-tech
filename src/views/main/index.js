@@ -6,7 +6,9 @@ const setupTemplate = () => {
   const $content = document.getElementById('content');
   $content.innerHTML = html`
     <div class="${styles['content-inner']}" id="articles">
-      <h1 class="${styles['main-title']}">메인 페이지</h1>
+      <div class="${styles['main-title-container']}">
+        <h1>메인 페이지</h1>
+      </div>
     </div>
   `;
 };
@@ -19,9 +21,13 @@ const makeArticleElement = props => {
   article.innerHTML = html`
     <img alt="썸네일 이미지" src="${thumbnailImage}" />
     <div>
-      <span class="${styles['main-article-title']}">${title}</span>
-      <span class="${styles['main-article-summary']}">${summary}</span>
-      <span class="${styles['main-article-created-date']}">${formatDate(createdDate)}</span>
+      <span class="${styles['main-article-title-container']}">
+        <p>${title}</p>
+      </span>
+      <span class="${styles['main-article-summary-container']}">
+        <p>${summary}</p>
+      </span>
+      <p class="${styles['main-article-created-date']}">${formatDate(createdDate)}</p>
     </div>
   `;
   return article;

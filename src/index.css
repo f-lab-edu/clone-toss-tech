@@ -46,11 +46,10 @@ td, th {
 .main-header {
     height: 60px;
     background-color: white;
-    border-bottom: 1px solid black;
-    position: fixed;
+    border-bottom: 1px solid #e5e8ea;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
 }
 
 .header-container {
@@ -58,25 +57,30 @@ td, th {
     max-width: 1140px;
     height: 100%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
 }
 
-.logo-image-container {
-    margin-left: 8%;
+.header-container-inner {
+    height: 100%;
+    width: 92%;
+    margin: 0 auto;
+    max-width: calc(100% - 48px);
+    display: flex;
+}
+
+.logo-container {
     height: 100%;
     cursor: pointer;
     display: flex;
     align-items: center;
 }
 
-.logo-image-container img {
-    height: 60%;
+.logo-container img {
+    height: 100%;
 }
 
 #content {
-    max-height: calc(100vh - 60px);
+    height: 100%;
     max-width: 980px;
     width: 100%;
-    margin: 61px auto 200px;
+    margin: 0 auto 200px;
 }

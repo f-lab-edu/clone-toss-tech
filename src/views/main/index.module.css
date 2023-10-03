@@ -1,9 +1,11 @@
-.main-title {
-  display: inline-block;
+.main-title-container {
   width: 100%;
+  margin: 72px 10px 0 10px;
+}
+
+.main-title-container h1 {
   font-size: 36px;
   font-weight: 700;
-  margin: 72px 10px 0 10px;
 }
 
 .content-inner {
@@ -28,32 +30,37 @@
   object-fit: cover;
 }
 
-.main-article-title {
-  display: inline-block;
+.main-article-title-container {
+  display: block;
   overflow: hidden;
-  line-height: 1.4;
   text-overflow: ellipsis;
   overflow-wrap: break-word;
   word-break: break-word;
-  color: black;
-  font-size: 36px;
-  font-weight: bold;
-  margin-top: 0;
   margin-bottom: 14px;
 }
 
-.main-article-summary {
-  font-size: 17px;
-  line-height: 1.6;
+.main-article-title-container p {
+  line-height: 1.4;
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.main-article-summary-container {
   display: block;
   text-overflow: ellipsis;
-  font-weight: 500;
-  color: rgb(128, 128, 128);
   margin-bottom: 12px;
 }
 
-.main-created-date {
-  font-size: 15px;
+.main-article-summary-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #808080;
+}
+
+.main-article-created-date {
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   color: #4e5968;
