@@ -1,0 +1,54 @@
+.main-title {
+    display: inline-block;
+    width: 100%;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 72px 10px 0 10px;
+}
+
+.content {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto 200px;
+}
+
+.content-inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header-image img {
+    width: 100%;
+    margin-top: 36px;
+    border-radius: 12px;
+}
+
+.header-title-container {
+    margin-top: 20px;
+}
+
+.header-title-container h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.25;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.header-created-date-container {
+    padding-top: 8px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.header-created-date-container span {
+    font-size: 24px;
+}
+
+.article-body {
+    color: #333d4b;
+    white-space: pre-wrap;
+    margin-top: 60px;
+    font-size: 20px;
+    line-height: 1.8;
+}

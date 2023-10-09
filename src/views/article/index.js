@@ -1,18 +1,24 @@
 import { formatDate, html } from '../../utils';
+import styles from './index.module.css';
 
 export default function render(props) {
   const { body, created_date: createdDate, title, thumbnail_image: thumbnailImage } = props;
   const $content = document.getElementById('content');
+  $content.className = styles.content;
   $content.innerHTML = html`
-    <article>
+    <article class="${styles['content-inner']}">
       <header>
-        <div>
+        <div class="${styles['header-image']}">
           <img alt="제목 이미지" src="${thumbnailImage}" />
         </div>
-        <h1>${title}</h1>
-        <span>${formatDate(createdDate)}</span>
+        <div class="${styles['header-title-container']}">
+          <h1>${title}</h1>
+        </div>
+        <div class="${styles['header-created-date-container']}">
+          <span>${formatDate(createdDate)}</span>
+        </div>
       </header>
-      <div>${body}</div>
+      <div class="${styles['article-body']}">${body}</div>
     </article>
   `;
 }
