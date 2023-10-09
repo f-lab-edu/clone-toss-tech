@@ -5,9 +5,9 @@ import Model from './models/article';
 import Controller from './controllers/index';
 
 const onClickLogo = router => {
-  const logoImage = document.getElementsByClassName('logo-image');
-  if (logoImage) {
-    logoImage[0].addEventListener('click', () => {
+  const $logo = document.getElementsByClassName('logo-container');
+  if ($logo) {
+    $logo[0].addEventListener('click', () => {
       if (window.location.pathname !== '/') {
         window.history.pushState('', '', '/');
         router.navigate(window.location.pathname);
@@ -19,15 +19,15 @@ const hasMocks = initMocks();
 const start = () => {
   const app = document.getElementById('root');
   app.innerHTML = html`
-    <section>
-      <header class="main-header">
-        <div class="header-container">
-          <div class="logo-image">
-            <img alt="로고 이미지" src="/images/logo-image.png" />
+    <header class="main-header">
+      <div class="header-container">
+        <div class="header-container-inner">
+          <div class="logo-container">
+            <img alt="로고 아이콘" src="/images/logo-image.png" />
           </div>
         </div>
-      </header>
-    </section>
+      </div>
+    </header>
     <section>
       <div id="content"></div>
     </section>

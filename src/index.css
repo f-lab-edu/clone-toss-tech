@@ -42,3 +42,48 @@ table {
 td, th {
     padding: 0
 }
+
+#root {
+    position: relative;
+}
+
+.main-header {
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #e5e8ea;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header-container-inner {
+    height: 100%;
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.logo-container {
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 34px;
+}
+
+#content {
+    height: 100%;
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto 200px;
+}
