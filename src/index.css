@@ -43,6 +43,10 @@ td, th {
     padding: 0
 }
 
+#root {
+    position: relative;
+}
+
 .main-header {
     height: 60px;
     background-color: white;
@@ -63,7 +67,6 @@ td, th {
     height: 100%;
     width: 92%;
     margin: 0 auto;
-    max-width: calc(100% - 48px);
     display: flex;
 }
 
