@@ -15,3 +15,10 @@ $ git clone https://github.com/f-lab-edu/clone-toss-tech.git
 $ npm install
 $ npm run dev
 ```
+
+## Preview
+### Main Page
+![image](https://github.com/f-lab-edu/clone-toss-tech/assets/48908205/ac34d38a-ff7b-450a-af4e-c6e37030ff46)
+
+### Article Page
+![image](https://github.com/f-lab-edu/clone-toss-tech/assets/48908205/7cb35992-0cc6-4585-85cc-59d3e091819d)
