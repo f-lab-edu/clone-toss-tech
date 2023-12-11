@@ -137,6 +137,72 @@
       "title": "레고처럼 조립하는 토스 앱",
       "summary": "수많은 서비스를 담고 있는 대규모 iOS 앱에 어울리는 아키텍처는 무엇일까요?\n프로젝트 간의 의존성과 모듈 간의 결합도를 낮춰, 더 효율적인 서비스 개발, 관리를 이뤄낸 과정을 소개합니다. ",
       "created_date": "20230822"
+    },
+    "24": {
+      "thumbnail_image": "https://static.toss.im/career-resource/techblog_slash23_thumb_02.png",
+      "title": "은행 최초 코어뱅킹 MSA 전환기 (feat. 지금 이자 받기)",
+      "summary": "수십 년간 정체되어 있던 전통적인 은행 시스템의 모놀리식 소프트웨어 아키텍처를 MSA로 전환할 수 있을까요? \n토스뱅크의 ‘코어뱅킹 MSA 전환’ 사례를 통해 향후 은행 시스템이 나아가야 할 방향을 소개합니다.",
+      "created_date": "20230831"
+    },
+    "25": {
+      "thumbnail_image": "https://static.toss.im/career-resource/techblog_slash23_thumb_03%20(1).png",
+      "title": "금융사 최초의 Zero Trust 아키텍처 도입기",
+      "summary": "왜 보안이 강화될수록, 업무는 불편해지는 걸까요? \n금융에서 가장 중요한 가치인 ‘안전’과 혁신을 위한 ‘업무 편의성’, 두 마리 토끼를 모두 잡기 위한 여정을 소개합니다.  ",
+      "created_date": "20230901"
+    },
+    "26": {
+      "thumbnail_image": "https://static.toss.im/illusts-content/img-how-to-read.jpg",
+      "title": "환경 고민없이 개발하기",
+      "summary": "서버 사이드 렌더링 작동 방식과 Isomorphic에 대해 소개드려요.",
+      "created_date": "20230901"
+    },
+    "27": {
+      "thumbnail_image": "https://static.toss.im/ml-illust/img-people-check-outfut.jpg",
+      "title": "프론트엔드 다이빙클럽에서 만나는 아고라: 다른 회사에선 테스트 코드 어떻게 짜요?",
+      "summary": "‘프론트엔드 테스팅’을 주제로 진행된 프론트엔드 다이빙 클럽의 네번째 모임을 공유합니다.",
+      "created_date": "20231011"
+    },
+    "28": {
+      "thumbnail_image": "https://static.toss.im/career-resource/techblog_slash23_thumb_04_%EC%9D%B4%EC%A4%80%ED%99%98.png",
+      "title": "대규모 로그 처리도 OK! Elasticsearch 클러스터 개선기",
+      "summary": "일평균 56억 건 이상 수집되는 토스증권의 로그, 어떻게 효율적으로 처리할까요?\n큰 폭으로 늘어나는 대규모 로그 처리를 위한 ‘Elasticsearch 클러스터 개선 경험’을 소개합니다.",
+      "created_date": "20231012"
+    },
+    "29": {
+      "thumbnail_image": "https://static.toss.im/career-resource/techblog_slash23_thumb_05_최준우.png",
+      "title": "토스는 Gateway 이렇게 씁니다",
+      "summary": "더 안전하고 안정적인 서비스 운영을 위해서 ‘gateway’를 어떻게 사용해야 할까요? \n토스의 수많은 마이크로서비스 로직을 공통화하기 위한 gateway 운영 방법에 대해 소개합니다.",
+      "created_date": "20231012"
+    },
+    "30": {
+      "thumbnail_image": "https://static.toss.im/career-resource/techblog_slash23_thumb_06_김동석.png",
+      "title": "유연하고 안전하게 배포 Pipeline 운영하기",
+      "summary": "생산성, 안정성, 보안성을 모두 달성하기 위해선 ‘Pipeline’을 어떻게 설정해야 할까요?\n다양하고 복잡한 토스뱅크의 배포 ‘Pipeline’를 안전하게 운영하기 위한 노력을 소개합니다.",
+      "created_date": "20231012"
+    },
+    "31": {
+      "thumbnail_image": "https://static.toss.im/assets/payments/contents/engineering_thumb.jpg",
+      "title": "웹에서 복잡한 퍼널 쉽게 관리하기",
+      "summary": "토스페이먼츠 프론트엔드 챕터에서 웹에서 퍼널을 손쉽게 관리하기 위해 했던 고민과 해결 방법을 공유해요.",
+      "created_date": "20231018"
+    },
+    "32": {
+      "thumbnail_image": "https://static.toss.im/ml-illust/_20231108_104549157.png",
+      "title": "null 리턴은 왜 나쁠까?",
+      "summary": "코드 복잡성 관리 측면에서 의미를 축약한 표현의 문제와 해결 방법을 예제로 알아봐요.",
+      "created_date": "20231108"
+    },
+    "33": {
+      "thumbnail_image": "https://static.toss.im/assets/payments/contents/feign-thumb.jpg",
+      "title": "Feign 코드 분석과 서버 성능 개선",
+      "summary": "Feign과 다중 스레드를 사용하는 과정에서 생긴 문제를 이해하고 성능 개선까지 한 경험을 공유해요.",
+      "created_date": "20231122"
+    },
+    "34": {
+      "thumbnail_image": "https://static.toss.im/assets/payments/contents/contents-fx-thumb.jpg",
+      "title": "인자가 많은 메서드는 왜 나쁠까?",
+      "summary": "인자가 많은 메서드를 함께 리팩토링 하면서 코드 사용자 입장에서 코드 복잡성을 관리하는 방법을 알아봅니다.",
+      "created_date": "20231129"
     }
   }
 }
