@@ -4,7 +4,6 @@ import styles from './index.module.css';
 export default function render(props) {
   const { body, created_date: createdDate, title, thumbnail_image: thumbnailImage } = props;
   const $content = document.getElementById('content');
-  $content.className = styles.content;
   $content.innerHTML = html`
     <article class="${styles['content-inner']}">
       <header>
