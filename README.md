@@ -10,6 +10,7 @@
 ## 프로젝트 목표
 Vanilla JS와 History API를 사용하여 SPA를 구현합니다.  
 [MVC 패턴](https://developer.mozilla.org/ko/docs/Glossary/MVC)에 기반한 구조로 설계합니다.  
+코드를 추상화하여 객체지향 설계를 지향합니다.  
 
 ## How to run
 
