@@ -5,7 +5,7 @@
 해당 프로젝트의 [테크 스펙](https://docs.google.com/document/d/1Mo0bxmFlvRBjjDsTF8LsH1OGRASzghsj9XOpNwGINEo/edit?usp=sharing)입니다.
 
 ## 프로젝트 결과물
-[결과물 링크 열기](http://211.250.82.235:53000/)
+[결과물 링크 열기](https://clone-toss-tech.vercel.app/)
 
 ## 프로젝트 목표
 Vanilla JS와 History API를 사용하여 SPA를 구현합니다.  
