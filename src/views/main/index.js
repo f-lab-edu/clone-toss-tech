@@ -19,7 +19,9 @@ const makeArticleElement = props => {
   article.id = id;
   article.className = styles['main-article-container'];
   article.innerHTML = html`
-    <img alt="썸네일 이미지" src="${thumbnailImage}" />
+    <div class="${styles['thumbnail-image']}">
+      <img alt="썸네일 이미지" src="${thumbnailImage}" />
+    </div>
     <div>
       <span class="${styles['main-article-title-container']}">
         <p>${title}</p>
